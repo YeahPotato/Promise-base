@@ -1,0 +1,27 @@
+{
+  "name": "promise-base",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "doc": "doc"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YeahPotato/Promise-base.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/YeahPotato/Promise-base/issues"
+  },
+  "homepage": "https://github.com/YeahPotato/Promise-base#readme",
+  "keywords": [],
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}

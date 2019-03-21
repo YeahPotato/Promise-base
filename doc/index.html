@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../index.js"></script>
+    <title>Document</title>
+</head>
+<body>
+        <div>_Promise base</div>
+</body>
+<script>
+    window.onload = function(){
+        let getData = ()=>{
+            return new _Promise((resolve,reject)=>{
+                let xhr = new XMLHttpRequest();
+                xhr.open('POST', 'http://localhost:8888/data', true);
+                xhr.send();
+                xhr.onreadystatechange = function () {
+                    if (xhr.readyState === 4) {
+                        if (xhr.status === 304 || (xhr.status >= 200 && xhr.status < 300)) {
+                            resolve(xhr.responseText);
+                        } else {
+                            reject(xhr.status);
+                        }
+                    }
+                }
+            })
+        }
+
+
+
+        getData().then((success)=>{
+            console.log(success);
+        },error=>{
+        })
+    }
+</script>
+</html>
